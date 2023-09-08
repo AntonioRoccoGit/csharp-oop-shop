@@ -27,8 +27,8 @@ namespace csharp_oop_shop
             
         }
 
-        //PROPRETIES
 
+        //PROPRETIES
 
         //serial number
         public double SerialNumber
@@ -103,7 +103,8 @@ namespace csharp_oop_shop
 
         //GETTER
 
-        public float getIvaTotalPrice()
+        //get the total price with vat
+        public float GetIvaTotalPrice()
         {
             float totalPrice = 0;
             totalPrice = this.price + ((this.price *  this.vat) / 100);
@@ -111,7 +112,9 @@ namespace csharp_oop_shop
 
         }
 
-        public string getIdentificationName()
+
+        //get the univoque name of your product
+        public string GetIdentificationName()
         {
             string fullName = $"{this.name} (S/N {this.serialNumber})";
             return fullName;
@@ -119,7 +122,7 @@ namespace csharp_oop_shop
 
 
 
-        //logical function
+        //CLASS FUNCTIONS
         private void GenerateSerialNumber()
         {
             string serialString = "";
